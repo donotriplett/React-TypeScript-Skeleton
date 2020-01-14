@@ -95,22 +95,19 @@
 
 "use strict";
 
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
-    result["default"] = mod;
-    return result;
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const React = __importStar(__webpack_require__(/*! react */ "react"));
-exports.Hello = (props) => (React.createElement("div", null,
-    React.createElement("h1", null,
-        "Hello from ",
-        props.compiler,
-        " and ",
-        props.framework,
-        "!")));
+const react_1 = __importDefault(__webpack_require__(/*! react */ "react"));
+exports.Hello = (props) => {
+    return (react_1.default.createElement("div", null,
+        react_1.default.createElement("h1", null,
+            props.compiler,
+            ",",
+            react_1.default.createElement("br", null),
+            props.framework)));
+};
 
 
 /***/ }),
